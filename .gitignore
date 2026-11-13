@@ -5,3 +5,5 @@ __pycache__/
 configs/local.yaml
 artifacts/
 .env
+data/
+reports/
