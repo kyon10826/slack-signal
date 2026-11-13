@@ -1,0 +1,25 @@
+paths:
+  export_dir: data/real/extracted
+  metadata_export: data/real/official_export.zip
+  warehouse: data/real/warehouse.duckdb
+  artifacts_dir: data/real/artifacts
+  reports_dir: data/real/reports
+
+model:
+  capacity_k: 5
+  cv_folds: 4
+  cv_fold_snapshots: 13
+  exclude_from_scoring: []
+
+privacy:
+  exclude_users: []
+
+expertise:
+  lookback_days: 120
+  min_messages: 3
+
+recommend:
+  n_experts: 3
+
+slack:
+  manager_user_ids: []

@@ -1,0 +1,7 @@
+paths:
+  warehouse: /data/warehouse.duckdb
+  artifacts_dir: /data/artifacts
+model:
+  capacity_k: 5
+slack:
+  manager_user_ids: []

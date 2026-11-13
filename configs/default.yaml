@@ -1,0 +1,47 @@
+paths:
+  export_dir: data/raw/slack_export
+  metadata_export: data/raw/metadata_export.zip
+  ground_truth_dir: data/raw/_ground_truth
+  warehouse: data/warehouse.duckdb
+  artifacts_dir: artifacts
+  reports_dir: reports
+
+synthetic:
+  seed: 42
+  n_initial_members: 220
+  weekly_new_members: 4.0
+  start_date: 2025-11-03
+  n_days: 364
+
+labeling:
+  observation_days: 28
+  horizon_days: 28
+  min_tenure_days: 7
+  snapshot_every_days: 7
+  warmup_days: 56
+
+model:
+  capacity_k: 20
+  cv_folds: 4
+  cv_fold_snapshots: 3
+  test_snapshots: 8
+  random_state: 42
+  n_search_iter: 12
+
+expertise:
+  lookback_days: 120
+  n_components: 64
+  min_messages: 3
+
+recommend:
+  top_k_members: 20
+  n_experts: 3
+  n_channels: 2
+  excluded_channels: [general, random, introductions, events]
+
+privacy:
+  exclude_users: []
+
+slack:
+  digest_channel: "#community-managers"
+  manager_user_ids: []
